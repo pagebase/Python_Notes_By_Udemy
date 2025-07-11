@@ -8,3 +8,4 @@
 # Section 2: Python setup
 
 6. Command line basics (10 Jul 2025)
+7. Installing python (11 Jul 2025)
