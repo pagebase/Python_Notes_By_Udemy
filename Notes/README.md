@@ -202,3 +202,37 @@ https://drive.google.com/drive/folders/1CKqOQzst1cGURXGiRVivi2Xsc0n-X8CR?usp=sha
 5. How to get back one step back from directory?
 	> Type `cd ..`, you can exit one directory.
 ---
+## Data types in python.
+
+| Name       | Type  | Description                                                            | Example                                                                                                                                                                                                   |
+| ---------- | ----- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Integer    | `int` | Whole number such as 1,2,3,4 etc. which doesn't hold any fraction part | ```<br>age=20<br><br>print(age) # Output: 20<br><br>print(type(age)) # Output: <class 'int'><br>```                                                                                                       |
+| Float      | float | Fraction number such as 1.5, 10.0                                      | ```<br>height=10.5<br><br>print(height) # Output: 10.5<br><br>print(type(height)) # Output: <class 'float'><br>```                                                                                        |
+| String     | str   | Collection of characters such as `Ramesh`, `Pooja`                     | ```<br>name="Pooja"<br><br>print(name) # Output: Pooja<br><br>print(type(name)) # Output: <class 'str'><br>```                                                                                            |
+| List       | list  | Collection of homogeneous or heterogeneous data types.                 | ```<br>cities=["Mumbai", "Pune", 200, 100]<br><br>print(cities) # Output: ['Mumbai', 'Pune', 200, 100]<br><br>print(type(cities)) # Output: <class 'list'><br>```                                         |
+| Dictionary | dict  | Unordered `key:value` pair.                                            | ```<br>cityWithPopulation={"Mumbai": 100, "Pune": 200}<br><br>print(cityWithPopulation) # Output: {'Mumbai': 100, 'Pune': 200}<br><br>print(type(cityWithPopulation)) # Output: <class 'dict'><br>```     |
+| Tuples     | tup   | Order immutable sequence of objects.                                   | ```<br>cities=("Mumbai", "Pune", 100, 200)<br><br>print(cities) # Output: ('Mumbai', 'Pune', 100, 200)<br><br>print(type(cities)) # Output: <class 'tuple'><br>```                                        |
+| Sets       | set   | Unordered collection of unique objects.                                | ```<br>alpha={"a", "b", "c", "c"}<br><br>print(alpha) # Output: {'a', 'b', 'c'}<br><br>print(type(alpha)) # Output: <class 'set'><br>```                                                                  |
+| Booleans   | bool  | Logical value indicate `True` or `False`                               | ```<br>yes=True<br><br>no=False<br><br>print(yes) # Output: True<br><br>print(type(yes)) # Output: <class 'bool'><br><br>print(no) # Output: False<br><br>print(type(no)) # Output: <class 'bool'><br>``` |
+### Operators: 
+Operators are special symbols or keywords used to perform operations on variables and values.
+
+|Operator|Description|Example|Output|
+|---|---|---|---|
+|`+`|Addition|`5 + 3`|`8`|
+|`-`|Subtraction|`5 - 2`|`3`|
+|`*`|Multiplication|`4 * 3`|`12`|
+|`/`|Division (float)|`10 / 4`|`2.5`|
+|`//`|Floor Division|`10 // 4`|`2`|
+|`%`|Modulus (remainder)|`10 % 3`|`1`|
+|`**`|Exponentiation|`2 ** 3`|`8`
+>**Problem 1:** Numbers: Simple Arithmetic
+
+>Write an expression that equals 100. 
+
+>For example `50+50`   or `110-10` . 
+
+>See if you can use more than one arithmetic operator! Write only one expression and submit only one line of code.
+
+>If your expression results in 100, then you should see a success message after you test out your >solution :)
+
