@@ -234,4 +234,7 @@ https://drive.google.com/drive/folders/1CKqOQzst1cGURXGiRVivi2Xsc0n-X8CR?usp=sha
 >Great for ensuring reproducibility with isolated environments.
 
 **Step 2:** Download based on your operating system.
+
 **Step 3:** Launch *Jupyter* notebook, this will get you in your default browser.
+
+:emojicode:
