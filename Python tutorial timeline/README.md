@@ -11,4 +11,11 @@
 7. Installing python (11 Jul 2025)
 8. Running python code (11 Jul 2025)
 9. Getting the notebook and the course material (12 Jul 2025)
-10. Git and github overview
+10. Git and github overview (12 Jul 2025)
+---
+# Section 3: Python object and data structure basics
+
+11. Introduction to python data types (12 Jul 2025)
+12. Python numbers (12 Jul 2025)
+13. Numbers (12 Jul 2025)
+14. Variable assignments (12 Jul 2025)
