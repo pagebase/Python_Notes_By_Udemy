@@ -1,4 +1,4 @@
-# Section 1:
+# Section 1: Course Overview
 
 1. Auto welcome message (10 Jul 2025)
 2. Course introduction (10 Jul 2025)
@@ -11,3 +11,4 @@
 7. Installing python (11 Jul 2025)
 8. Running python code (11 Jul 2025)
 9. Getting the notebook and the course material (12 Jul 2025)
+10. Git and github overview
