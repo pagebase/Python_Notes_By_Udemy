@@ -201,4 +201,37 @@ https://drive.google.com/drive/folders/1CKqOQzst1cGURXGiRVivi2Xsc0n-X8CR?usp=sha
 	> Type `cls` to clear your cluttered console.
 5. How to get back one step back from directory?
 	> Type `cd ..`, you can exit one directory.
+ 
 ---
+**Step 1:** Visit [Anaconda website](https://www.anaconda.com/download/success)
+ >Why to use *Anaconda?*
+ >Anaconda is a popular distribution of Python (and R) specifically designed for data science, machine learning, and scientific computing. It simplifies package management and deployment, making it especially useful for handling large-scale data analysis and complex dependencies.
+
+ >Key Features of Anaconda:
+
+>1. Pre-installed Packages: Comes with 250+ popular Python packages (like NumPy, pandas, matplotlib, scikit-learn, etc.) for data analysis, visualization, and machine learning.
+
+
+>2. Conda Package Manager: A powerful tool to install, update, and manage packages and environments, similar to pip but more suited for managing dependencies.
+
+
+>3. Environment Management: Allows creation of isolated environments for different projects to avoid conflicts between package versions.
+
+
+>4. Jupyter Notebooks: Includes Jupyter for interactive coding and data exploration.
+
+
+>5. Spyder IDE: Often bundled with Anaconda as a scientific development environment for Python.
+
+
+
+ >Why Use Anaconda?
+
+>Beginner-friendly for data science and machine learning.
+
+>Saves time by avoiding manual installation of complex libraries.
+
+>Great for ensuring reproducibility with isolated environments.
+
+**Step 2:** Download based on your operating system.
+**Step 3:** Launch *Jupyter* notebook, this will get you in your default browser.
