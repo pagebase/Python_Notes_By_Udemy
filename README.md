@@ -310,5 +310,5 @@ print(name.replace("R","M")) # Output: Mohit
 name="Rohit,Sharma"
 nameList=name.split(",")
 print(nameList) # Output: ["Rohit", "Sharma"]
-print(type(nameList)) # Output: <class 'str'>
+print(type(nameList)) # Output: <class 'list'>
 ```
