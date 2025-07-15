@@ -231,3 +231,5 @@ Operators are special symbols or keywords used to perform operations on variable
 >Write an expression that equals 100. 
 
 >For example `50+50`   or `110-10` . 
+
+<span style="color:red">This text is red.</span>
