@@ -1,5 +1,3 @@
-Auto-Welcome Message
-
 Hello and welcome to the course! This is just a quick automatic message with some useful tips, the next video goes over a lot of this as well.
 
 1. Please watch the course overview lecture, lots of useful info there!
@@ -311,4 +309,46 @@ name="Rohit,Sharma"
 nameList=name.split(",")
 print(nameList) # Output: ["Rohit", "Sharma"]
 print(type(nameList)) # Output: <class 'list'>
+```
+
+6. `join(iterable)` Joins elements of an iterable into single string.
+```python
+source="D:/Country"
+myFolderLocation="States"
+fullPath="/".join([source, myFolderLocation])
+print(fullPath) # Output: D:/Country/States
+print(type(fullPath)) # Output: <class 'str'>
+```
+
+7. `find(substring)` Returns the lowest index where the substring is found, or `-1` if not found. If string contains `Rohit Roshan`, only first occurence of character's index value returned. You can see in the example.
+```python
+name="RohitRoshan"
+print(name.find("R")) # Output: 0
+print(name.find("d")) # Output: -1
+```
+
+8. `startswith(prefix)` Check if the string starts with a specified substring. It returns `boolean` value.
+```python
+name="Rohit"
+print(name.startswith("R")) # Output: True
+fullName="Rohit Sharma"
+print(fullName.startswith("Rohit")) # Output: True
+print(fullName.startswith("Sharma")) # Output: False
+```
+
+9. `endswith(suffix)` Check if the string ends with a specified substring.
+```python
+name="Rohit"
+print(name.endswith("t")) # Output: True
+fullName="Rohit Sharma"
+print(fullName.endswith("Rohit")) # Output: False
+print(fullName.endswith("Sharma")) # Output: True
+```
+
+10. `isdigit()` Returns `True` if all characters in the string are **Digits**.
+    - `age=20` not allowed.
+    - `age="20"` allowed.
+```python
+age="20"
+print(age.isdigit()) # Output: True
 ```
