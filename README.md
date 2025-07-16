@@ -348,7 +348,10 @@ print(fullName.endswith("Sharma")) # Output: True
 10. `isdigit()` Returns `True` if all characters in the string are **Digits**.
     - `age=20` not allowed.
     - `age="20"` allowed.
+
 ```python
 age="20"
 print(age.isdigit()) # Output: True
 ```
+
+---
