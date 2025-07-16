@@ -285,17 +285,17 @@ print(name[-1]) # Output: t
 
 ## Top 10 String methods.
 
-1. `upper()` convert all characters into uppercase.
+1. `upper()` Convert all characters into uppercase.
 ```python
 name="rohit"
 print(name.upper()) # Output: ROHIT
 ```
-2. `lower()` converts all characters in lower case.
+2. `lower()` Converts all characters in lower case.
 ```python
 name="ROHIT"
 print(name.lower()) # Output: rohit
 ```
-3. `strip()` removes leading(starting) & trailing(Ending) whitespaces.
+3. `strip()` Removes leading(starting) & trailing(Ending) whitespaces.
 ```python
 name="    Rohit    "
 print(name.strip()) # Output: Rohit
