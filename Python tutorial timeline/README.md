@@ -22,3 +22,4 @@
 13. Numbers (12 Jul 2025)
 14. Variable assignments (12 Jul 2025)
 15. Introduction to string (16 Jul 2025)
+16. Indexing and slicing with String (18 Jul 2025)
