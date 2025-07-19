@@ -503,3 +503,36 @@ print(f"Value is {value:.2f}")  # Output: Value is 1.71
      lst = [1, 2, 3]
      lst_copy = lst.copy()  # New list [1, 2, 3]
      ```
+
+Untitled 1
+Dictionary in Python
+A Dictionary in Python is an unordered, mutable, and indexed collection of key-value pairs. It is defined using curly braces {} or the dict() constructor.
+
+Key Features:
+✔ Unordered – Elements are not stored in any particular order.
+✔ Mutable – Can be modified after creation.
+✔ Indexed by Keys – Values are accessed using unique keys (not by position).
+✔ No Duplicate Keys – Each key must be unique; duplicate keys overwrite existing values.
+✔ Heterogeneous – Keys and values can be of any data type.
+
+Syntax:
+my_dict = {key1: value1, key2: value2, ...}
+# or
+my_dict = dict(key1=value1, key2=value2, ...)
+Example:
+student = {
+    "name": "Alice",
+    "age": 21,
+    "courses": ["Math", "Physics"]
+}
+
+print(student["name"])  # Output: Alice
+Common Dictionary Methods:
+Method	Description	Example
+keys()	Returns all keys	student.keys() → dict_keys(['name', 'age', 'courses'])
+values()	Returns all values	student.values() → dict_values(['Alice', 21, ['Math', 'Physics']])
+items()	Returns key-value pairs	student.items() → dict_items([('name', 'Alice'), ('age', 21), ...])
+get(key, default)	Safely retrieves a value	student.get("grade", "N/A") → "N/A"
+update()	Updates dictionary with new key-values	student.update({"grade": "A"})
+pop(key)	Removes a key and returns its value	student.pop("age") → 21
+Use Cases:
