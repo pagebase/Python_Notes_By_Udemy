@@ -25,3 +25,4 @@
 16. Indexing and slicing with String (18 Jul 2025)
 17. String properties and methods (18 Jul 2025)
 19. Print formatting with string (18 Jul 2025)
+21. Lists in python (19 Jul 2025)
