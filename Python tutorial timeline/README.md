@@ -24,3 +24,4 @@
 15. Introduction to string (16 Jul 2025)
 16. Indexing and slicing with String (18 Jul 2025)
 17. String properties and methods (18 Jul 2025)
+19. Print formatting with string (18 Jul 2025)
