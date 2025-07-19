@@ -1,5 +1,3 @@
-Hello and welcome to the course! This is just a quick automatic message with some useful tips, the next video goes over a lot of this as well.
-
 1. Please watch the course overview lecture, lots of useful info there!
 2. Our course notebooks can be found at this link: [https://github.com/Pierian-Data/Complete-Python-3-Bootcamp](https://github.com/Pierian-Data/Complete-Python-3-Bootcamp) 
 3. We go over downloading and using the notebooks in the lecture videos, so don't worry about how to use the link above, we will walk you through it all.
@@ -8,12 +6,6 @@ Hello and welcome to the course! This is just a quick automatic message with som
 6. Video guide on how to use the chat room: https://www.youtube.com/watch?v=bkH89OJ001M
 7. I don't control certification, Udemy does, information on this can be found here:  https://support.udemy.com/hc/en-us/articles/229603868-Certificate-of-Completion
 8. Course Slides can be found here: https://drive.google.com/drive/folders/1CKqOQzst1cGURXGiRVivi2Xsc0n-X8CR?usp=sharing
-
-Thank you so much for enrolling, I'm so excited for you to start your Python journey!
-
-Let's do this, I'll see you at the next lecture!
-
-Jose
 
 ---
 # Curriculum overview
@@ -303,7 +295,7 @@ print(name.strip()) # Output: Rohit
 name="Rohit"
 print(name.replace("R","M")) # Output: Mohit
 ```
-5. `split(separator)` Split the string into list of substring.
+5. `split(separator)` Split the string into list of substring. `separator` can be`,`, `.`, ` `.
 ```python
 name="Rohit,Sharma"
 nameList=name.split(",")
@@ -346,12 +338,73 @@ print(fullName.endswith("Sharma")) # Output: True
 ```
 
 10. `isdigit()` Returns `True` if all characters in the string are **Digits**.
-    - `age=20` not allowed.
-    - `age="20"` allowed.
-
 ```python
 age="20"
 print(age.isdigit()) # Output: True
 ```
 
 ---
+
+How to extract `hit` from `Rohit` string in python? Well, you can do it by slicing string. Slicing means cutting the main string into substring for you own use.
+
+### Syntax:
+
+```python
+string[startIndex: EndIndex: Step]
+```
+
+### Example:
+
+```python
+name="Rohit"
+print(name[2:5]) # Output: hit
+```
+If you observe carefully you would notice that `endIndex` is 5 but `5th` index's character not get printed. This happen due to string index start from `0`. `Step` is optional. If you don't mention `startInndex` then it consider `0` as default. If you don't mention `endIndex` then it consider `n-1` or `lastWord` as default.
+
+> **Note:** `String[::]` means start from `0` index to `n-1` index.
+
+---
+# Print formatting with String.
+
+```python
+name="Rohit"
+print(name) # Output: Rohit
+```
+
+In the above example just name being displayed; what if you wanna add `Hello Rohit` instead of `Rohit`? This done by `formating`. See the below example:
+
+```python
+name="Rohit"
+print("Hello",name) # Output: Hello Rohit
+```
+
+Another way to do this (**recommended**):
+
+```python
+name="Rohit"
+print(f"Hello {name}") # Output: Hello Rohit
+```
+
+> The `f` stands for **f-string**, which is short for **formatted string literal** — a powerful way to embed variables or expressions directly inside strings.
+
+# Float Formatting with f-strings
+
+You can control the **number of decimal places**, **alignment**, and more using **format specifiers** inside `{}`.
+
+What's the answer of `12/7`? Answer is `1.714286`. This number is too long to print onto console, however you can crop it by following method and result would be `1.7142` or how much decimal point you want, it arbitrary choice.
+
+```python
+value = 1.714286
+print(f"Value is {value:.2f}")  # Output: Value is 1.71
+```
+
+**Explanation:**
+
+- `:.2f` means:
+    
+    - `:` → Start format spec
+        
+    - `.2` → 2 decimal places. If you type `.4` answer would be `1.7142`
+        
+    - `f` → Fixed-point number (float)
+
