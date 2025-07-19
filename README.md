@@ -408,3 +408,98 @@ print(f"Value is {value:.2f}")  # Output: Value is 1.71
         
     - `f` → Fixed-point number (float)
 
+---
+# List
+
+`List` are ordered sequences that can hold a variety of object types. They use square brackets `[]` and commas `,` to separate object in the `list`. Example `List=[1,"A","Hello"]`. `List` support *indexing* & *slicing*. `List` can be nested & also have a variety of useful methods.
+
+# Top 10 Python List Methods
+
+
+## 1. `append(item)`  
+   - **Description**: Adds an item to the end of the list.  
+   - **Example**:  
+     ```python
+     lst = [1, 2, 3]
+     lst.append(4)  # [1, 2, 3, 4]
+     ```
+
+## 2. `extend(iterable)`  
+   - **Description**: Extends the list by appending elements from an iterable.  
+   - **Example**:  
+     ```python
+     lst = [1, 2]
+     lst.extend([3, 4])  # [1, 2, 3, 4]
+     ```
+
+## 3. `insert(index, item)`  
+   - **Description**: Inserts an item at a specified position.  
+   - **Example**:  
+     ```python
+     lst = [1, 3]
+     lst.insert(1, 2)  # [1, 2, 3]
+     ```
+
+## 4. `remove(item)`  
+   - **Description**: Removes the first occurrence of an item (raises `ValueError` if not found).  
+   - **Example**:  
+     ```python
+     lst = [1, 2, 2, 3]
+     lst.remove(2)  # [1, 2, 3]
+     ```
+
+## 5. `pop([index])`  
+   - **Description**: Removes and returns the item at the given index (default: last element).  
+   - **Example**:  
+     ```python
+     lst = [1, 2, 3]
+     last = lst.pop()  # Returns 3, lst becomes [1, 2]
+     ```
+
+## 6. `index(item[, start[, end]])`  
+   - **Description**: Returns the index of the first occurrence of an item.  
+   - **Example**:  
+     ```python
+     lst = [10, 20, 30]
+     idx = lst.index(20)  # 1
+     ```
+
+## 7. `count(item)`  
+   - **Description**: Returns the count of occurrences of an item.  
+   - **Example**:  
+     ```python
+     lst = [1, 2, 2, 3]
+     cnt = lst.count(2)  # 2
+     ```
+
+## 8. `sort(key=None, reverse=False)`  
+   - **Description**: Sorts the list in place (modifies the original list).  
+   - **Example**:  
+     ```python
+     lst = [3, 1, 2]
+     lst.sort()  # [1, 2, 3]
+     ```
+
+## 9. `reverse()`  
+   - **Description**: Reverses the list in place.  
+   - **Example**:  
+     ```python
+     lst = [1, 2, 3]
+     lst.reverse()  # [3, 2, 1]
+     ```
+
+## 10. `clear()`  
+   - **Description**: Removes all items from the list.  
+   - **Example**:  
+     ```python
+     lst = [1, 2, 3]
+     lst.clear()  # []
+     ```
+
+## 11.  `copy()`  
+   - **Description**: Returns a shallow copy of the list.  
+   - **Example**:  
+     ```python
+     lst = [1, 2, 3]
+     lst_copy = lst.copy()  # New list [1, 2, 3]
+     ```
