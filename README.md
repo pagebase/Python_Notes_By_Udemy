@@ -503,9 +503,8 @@ print(f"Value is {value:.2f}")  # Output: Value is 1.71
      lst = [1, 2, 3]
      lst_copy = lst.copy()  # New list [1, 2, 3]
      ```
-
-Untitled 1
-Dictionary in Python
+     
+# Dictionary in Python
 A Dictionary in Python is an unordered, mutable, and indexed collection of key-value pairs. It is defined using curly braces {} or the dict() constructor.
 
 Key Features:
