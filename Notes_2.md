@@ -94,7 +94,7 @@ print(minNum) # Output: 1
 ```python
 1
 ```
-> `max()` function won't work with different data types, only need single data type like `int` or `float`. Result in `TypeError`
+> `min()` function won't work with different data types, only need single data type like `int` or `float`. Result in `TypeError`
 
 5. `sum(tuple)` Return total sum of elements.
 #### Example:
