@@ -2,7 +2,7 @@
 1. [Syllabus overview](#syllabus-overview)
 2. [Installation process](#installation-process)
 3. [Why Python language?](#why-python-language)
-4. [Command line basics](#command-line-basics)
+4. [Command line basics](#Windows-command-(CMD)-line-basics)
 5. [Data types](#data-types)
 6. [Operators](#operators)
 7. [Variable assignments](#variable-assignments)
