@@ -7,7 +7,7 @@ supabase: Client = create_client(url, key)
 
 data = {
     "Sr.No": 1,
-    "TV_Show": "Dept Q",
+    "Show": "Dept Q",
     "Watched_Date": "2025-07-25"
 }
 
