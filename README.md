@@ -220,7 +220,7 @@ pip install flask
 > Packages will install only inside the virtual environment.
 
 ---
-# Why `python` langauge
+# Why `python` language
 
 **Python is a beginner-friendly and highly versatile programming language, making it easy to learn and implement across various domains.** From web development and automation to data science and machine learning, Python is used virtually everywhere. Its clean syntax and vast ecosystem of libraries make it suitable for both simple tasks and complex projects.
 
