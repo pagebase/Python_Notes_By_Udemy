@@ -86,7 +86,7 @@
 ---
 # Installation process
 
-## For windows:
+## :desktop_computer: For windows:
 
 #### Step 1: Download Python
 
