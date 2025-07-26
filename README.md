@@ -806,7 +806,7 @@ print(ITCompanies["Intel"])
 ```python
 1000
 ```
-
+> `keys` must be in double quote `""`
 # Top 6 `dictionary` methods
 
 1. `dict.keys()` Returns all keys
