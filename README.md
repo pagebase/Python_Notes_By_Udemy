@@ -576,3 +576,252 @@ print(f"Hello {name}") # Output: Hello Rohit
 You can control the **number of decimal places**, **alignment**, and more using **format specifiers** inside `{}`.
 
 What's the answer of `12/7`? Answer is `1.714286`. This number is too long to print onto console, however you can crop it by following method and result would be `1.7142` or how much decimal point you want, it arbitrary choice.
+
+```python
+value = 1.714286
+print(f"Value is {value:.2f}")  # Output: Value is 1.71
+```
+**Explanation:**
+
+- `:.2f` means:
+    
+    - `:` → Start format spec
+        
+    - `.2` → 2 decimal places. If you type `.4` answer would be `1.7142`
+        
+    - `f` → Fixed-point number (float)
+
+
+---
+# List
+
+`List` are ordered sequences that can hold a variety of object types. They use square brackets `[]` and commas `,` to separate object in the `list`. Example `List=[1,"A","Hello"]`. `List` support _indexing_ & _slicing_. `List` can be nested & also have a variety of useful methods.
+
+# Top 10 `python` `list` methods
+
+## 1. `append(item)`  
+   - **Description**: Adds an item to the end of the list.  
+   
+#### Example: 
+```python
+cities=["Pune","Mumbai"]
+
+  
+
+for i in cities:
+
+    print(i)
+
+print("----")
+
+  
+
+cities.append("Solapur")
+
+for i in cities:
+
+    print(i)
+```
+#### Output:
+```python
+Pune
+Mumbai
+----
+Pune
+Mumbai
+Solapur
+```
+
+## 2. `extend(iterable)`  
+   - **Description**: Extends the list by appending elements from an iterable.  
+#### Syntax:
+```python
+list1.extend(iterable)
+```
+-  `iterable` is any iterable object (like list, tuple, set, string, etc.).
+- It modifies `list1` **in place** and returns `None`.
+#### Example:
+```python
+List=[]
+
+  
+
+for i in range(1,10):
+
+    List.extend([i,i*2])
+
+  
+
+for i in List:
+
+    print(i)
+```
+#### Output:
+```python
+1
+2
+2
+4
+3
+6
+4
+8
+5
+10
+6
+12
+7
+14
+8
+16
+9
+18
+```
+## 3. `insert(index, item)`  
+   - **Description**: Inserts an item at a specified position.  
+   - **Example**:  
+```python
+lst = [1, 3]
+lst.insert(1, 2)  # [1, 2, 3]
+```
+
+## 4. `remove(item)`  
+   - **Description**: Removes the first occurrence of an item (raises `ValueError` if not found).  
+   - **Example**:  
+```python
+lst = [1, 2, 2, 3]
+lst.remove(2)  # [1, 2, 3]
+```
+
+## 5. `pop([index])`  
+   - **Description**: Removes and returns the item at the given index (default: last element).  
+   - **Example**:  
+```python
+lst = [1, 2, 3]
+last = lst.pop()  # Returns 3, lst becomes [1, 2]
+```
+
+## 6. `index(item)`  
+   - **Description**: Returns the index of the first occurrence of an item.  
+   - **Example**:  
+```python
+lst = [10, 20, 30]
+idx = lst.index(20)  # 1
+```
+
+## 7. `count(item)`  
+   - **Description**: Returns the count of occurrences of an item.  
+   - **Example**:  
+```python
+lst = [1, 2, 2, 3]
+cnt = lst.count(2)  # 2
+```
+
+## 8. `sort(key=None, reverse=False)`  
+   - **Description**: Sorts the list in place (modifies the original list).  
+#### Example:
+```python
+lst = [3, 1, 2]
+
+lst.sort(reverse=False)
+
+print(lst) # [1, 2, 3] Ascending order
+
+lst.sort(reverse=True)
+
+print(lst) # # [3,2,1] Descending order
+```
+#### Output:
+```python
+[1, 2, 3]
+[3, 2, 1]
+```
+
+## 9. `reverse()`  
+   - **Description**: Reverses the list in place.  
+   - **Example**:  
+```python
+lst = [1, 2, 3]
+lst.reverse()  # [3, 2, 1]
+```
+
+## 10. `clear()`  
+   - **Description**: Removes all items from the list.  
+   - **Example**:  
+```python
+lst = [1, 2, 3]
+lst.clear()  # []
+```
+
+## 11.  `copy()`  
+   - **Description**: Returns a shallow copy of the list.  
+   - **Example**:  
+```python
+lst = [1, 2, 3]
+lst_copy = lst.copy()  # New list [1, 2, 3]
+```
+
+---
+# Dictionary
+
+A **Dictionary** in Python is an unordered, mutable, and indexed collection of key-value pairs. It is defined using curly braces `{}` or the `dict()` constructor.
+
+## Key Features:
+
+- **Unordered** – Elements are not stored in any particular order.
+- **Mutable** – Can be modified after creation.
+- **Indexed by Keys** – Values are accessed using unique keys (not by position).
+- **No Duplicate Keys** – Each key must be unique; duplicate keys overwrite existing values.
+- **Heterogeneous** – Keys and values can be of any data type.
+
+#### Syntax:
+```python
+my_dict = {key1: value1, key2: value2, ...}
+# or
+my_dict = dict(key1=value1, key2=value2, ...)
+```
+#### Example 1:
+```python
+student = {
+    "name": "Alice",
+    "age": 21,
+    "courses": ["Math", "Physics"]
+}
+
+print(student["name"])  # Output: Alice
+print(student["courses"][0]) # Output: Math
+```
+#### Output:
+```python
+Alice
+Math
+```
+
+#### Example 2:
+```python
+ITCompanies=dict(Intel=1000,Google=2000)
+print(ITCompanies["Intel"])
+```
+#### Output:
+```python
+1000
+```
+
+# Top 6 `dictionary` methods
+
+1. `dict.keys()` Returns all keys
+#### Example:
+```python
+cities={"Pune":1000, "Mumbai":2000}
+
+keys=cities.keys()
+
+print(keys)
+
+print(type(keys))
+```
+#### Output:
+```python
+dict_keys(['Pune', 'Mumbai'])
+<class 'dict_keys'>
+```
