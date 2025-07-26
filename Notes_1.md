@@ -541,6 +541,16 @@ Alice
 Math
 ```
 
+## Example 2:
+```python
+ITCompanies=dict(Intel=1000,Google=2000)
+print(ITCompanies["Intel"])
+```
+## Output:
+```python
+1000
+```
+
 ## Common Dictionary Methods:  
 | Method | Description | Example |
 |--------|------------|---------|
