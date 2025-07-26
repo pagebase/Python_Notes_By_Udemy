@@ -6,7 +6,7 @@
 5. [Data types](#data-types)
 6. [Operators](#operators)
 7. [Variable assignments](#variable-assignments)
-	1. [Rules for variable assignment](#rules-for-variable-assignments)
+	1. [Rules for variable assignment](#valid-rules-for-naming-variables-in-python)
 8. [Strings](#strings)
 	1. [Top 10 string methods](#top-10-string-methods)
 	2. [Print formatting with string](#print-formatting-with-string)
@@ -310,3 +310,243 @@ For example, if your friend asks for a list of the best laptops under $5000, you
 | Tuples     | tup   | Order immutable sequence of objects.                                   | ```<br>cities=("Mumbai", "Pune", 100, 200)<br><br>print(cities) # Output: ('Mumbai', 'Pune', 100, 200)<br><br>print(type(cities)) # Output: <class 'tuple'><br>```                                        |
 | Sets       | set   | Unordered collection of unique objects.                                | ```<br>alpha={"a", "b", "c", "c"}<br><br>print(alpha) # Output: {'a', 'b', 'c'}<br><br>print(type(alpha)) # Output: <class 'set'><br>```                                                                  |
 | Booleans   | bool  | Logical value indicate `True` or `False`                               | ```<br>yes=True<br><br>no=False<br><br>print(yes) # Output: True<br><br>print(type(yes)) # Output: <class 'bool'><br><br>print(no) # Output: False<br><br>print(type(no)) # Output: <class 'bool'><br>``` |
+
+---
+# Operators
+
+Operators are special symbols or keywords used to perform operations on variables and values.
+
+|Operator|Description|Example|Output|
+|---|---|---|---|
+|`+`|Addition|`5 + 3`|`8`|
+|`-`|Subtraction|`5 - 2`|`3`|
+|`*`|Multiplication|`4 * 3`|`12`|
+|`/`|Division (float)|`10 / 4`|`2.5`|
+|`//`|Floor Division|`10 // 4`|`2`|
+|`%`|Modulus (remainder)|`10 % 3`|`1`|
+|`**`|Exponentiation|`2 ** 3`|`8`|
+
+# Variable assignments
+
+Variable assignments means assigning name, number, string to variable. For example, if you have name called _Rohit_ that means _Rohit_ name assigned to you when you get born. Similarly in programming language assigning value to variable useful for future use.
+
+#### Example 1:
+```python
+name="Rohit"
+
+age=21
+
+weight=65.80
+
+print("Name:", name)
+
+print("Age:", age)
+
+print("Weight:", weight)
+```
+#### Output:
+```python
+Name: Rohit
+Age: 21
+Weight: 65.8
+```
+
+![[Pasted image 20250726144748.png]]
+
+> When you assign particular value to 2 or more variable on that time single data reference is shared to that 2 variable instead of creating individual object. See above diagram. To check reference number, you can use `id()` method.
+
+#### Example:
+```python
+name="Rohit"
+
+myName="Rohit"
+
+print(id(name))
+
+print(id(myName))
+```
+#### Output:
+```python
+2391358551936
+2391358551936
+```
+---
+# ✅ Valid Rules for Naming Variables in Python
+
+1. **Must begin with a letter (A-Z, a-z) or an underscore `_`**
+    
+    - Examples: `name`, `_value`, `age1`
+        
+2. **Can contain letters, digits (0-9), and underscores**
+    
+    - Valid: `user_name`, `value1`, `x_2_y`
+        
+3. **Cannot start with a digit**
+    
+    - ❌ Invalid: `1name`, `3_value`
+        
+4. **Cannot be a Python keyword or reserved word**
+    
+    - ❌ Invalid: `class`, `def`, `for`, `if`, `while`, etc.
+        
+    - Use `import keyword; print(keyword.kwlist)` to see all keywords.
+        
+5. **Python is case-sensitive**
+    
+    - `score`, `Score`, and `SCORE` are three different variables.
+        
+
+---
+
+#### ✅ **Best Practices (Conventions)**
+
+- Use **lowercase letters** and **underscores** for readability (PEP 8 style guide):
+```python
+total_amount = 100
+user_name = "Alice"
+```
+- Use **UPPER_CASE** for constants (by convention):
+```python
+MAX_USERS = 50
+```
+
+---
+# Strings
+
+String is collection of characters. It can your name, address, pet name etc. Written in single quote `''` or double quote `""`. For example `name='Ramesh'` or `name="Ramesh"`. Strings are ordered sequences so it can be accessed through indexing. Indexing start from `0` to `n-1`. Negative indexing also exist in python language. To access particular character from string you can use `[]` square brackets. For example `myName[0]`. `myName` variable contains `Rohit` string, if you print `myName[0]` this would result in  `R`, because `R` is stored at `0` index. If you give negative index like `-10`, `-20`, this would print character from back to front.
+
+#### Example:
+```python
+myName="Rohit"
+
+print(myName[0]) # Output: R
+
+print(myName[1]) # Output: o
+
+print(myName[2]) # Output: h
+
+print(myName[3]) # Output: i
+
+print(myName[4]) # Output: t
+
+print(myName[5]) # Output: IndexError: string index out of range
+
+print(myName[-1]) # Output: t
+
+print(myName[-2]) # Output: i
+
+print(myName[-3]) # Output: h
+
+print(myName[-4]) # Output: o
+
+print(myName[-5]) # Output: R
+
+print(myName[-6]) # Output: IndexError: string index out of range
+
+print(myName[0:3]) # Output: Roh
+
+print(myName[1:4]) # Output: ohi
+
+print(myName[2:5]) # Output: hit
+
+print(myName[3:6]) # Output: it
+
+print(myName[0:6]) # Output: Rohit
+
+print(myName[0:7]) # Output: Rohit
+
+print(myName[0:8]) # Output: Rohit
+
+print(myName[0:9]) # Output: Rohit
+
+print(myName[0:10]) # Output: Rohit
+
+print(myName[0:11]) # Output: Rohit
+
+print(myName[0:12]) # Output: Rohit
+
+print(myName[0:13]) # Output: Rohit
+
+print(myName[0:14]) # Output: Rohit
+```
+
+---
+# Top 10 `String` methods
+
+1. `upper()` Convert all characters into uppercase.
+```python
+name="rohit"
+print(name.upper()) # Output: ROHIT
+```
+2. `lower()` Converts all characters in lower case.
+```python
+name="ROHIT"
+print(name.lower()) # Output: rohit
+```
+3. `strip()` Removes leading(starting) & trailing(Ending) whitespaces.
+```python
+name="    Rohit    "
+print(name.strip()) # Output: Rohit
+```
+4. `replace("old","new")` Replace all occurence of substring with another.
+```python
+name="Rohit"
+print(name.replace("R","M")) # Output: Mohit
+```
+5. `split(separator)` Split the string into list of substring. `separator` can be`,`, `.`, ` `.
+```python
+name="Rohit,Sharma"
+nameList=name.split(",")
+print(nameList) # Output: ["Rohit", "Sharma"]
+print(type(nameList)) # Output: <class 'list'>
+```
+
+6. `join(iterable)` Joins elements of an iterable into single string.
+```python
+source="D:/Country"
+myFolderLocation="States"
+fullPath="/".join([source, myFolderLocation])
+print(fullPath) # Output: D:/Country/States
+print(type(fullPath)) # Output: <class 'str'>
+```
+
+7. `find(substring)` Returns the lowest index where the substring is found, or `-1` if not found. If string contains `Rohit Roshan`, only first occurence of character's index value returned. You can see in the example.
+```python
+name="RohitRoshan"
+print(name.find("R")) # Output: 0
+print(name.find("d")) # Output: -1
+```
+
+8. `startswith(prefix)` Check if the string starts with a specified substring. It returns `boolean` value.
+```python
+name="Rohit"
+
+print(name.startswith("R")) # Output: True
+
+fullName="Rohit Sharma"
+
+print(fullName.startswith("Rohit")) # Output: True
+
+print(fullName.startswith("Sharma")) # Output: False
+
+print(fullName.startswith("Rohit Sharma")) # Output: True
+
+print(fullName.startswith("Roh")) # Output: True
+```
+
+9. `endswith(suffix)` Check if the string ends with a specified substring.
+```python
+name="Rohit"
+print(name.endswith("t")) # Output: True
+fullName="Rohit Sharma"
+print(fullName.endswith("Rohit")) # Output: False
+print(fullName.endswith("Sharma")) # Output: True
+```
+
+10. `isdigit()` Returns `True` if all characters in the string are **Digits**.
+```python
+age="20"
+print(age.isdigit()) # Output: True
+```
+
+---
