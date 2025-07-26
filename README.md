@@ -352,8 +352,9 @@ Weight: 65.8
 ```
 
 ![Diagram_1](./Resources/Diagram_1.png)
+*Diagram 1*
 
-> When you assign particular value to 2 or more variable on that time single data reference is shared to that 2 variable instead of creating individual object. See above diagram. To check reference number, you can use `id()` method.
+> When you assign particular value to 2 or more variable on that time single data reference is shared to that 2 variable instead of creating individual object. See above `Diagram 1`. To check reference number, you can use `id()` method.
 
 #### Example:
 ```python
@@ -550,3 +551,28 @@ print(age.isdigit()) # Output: True
 ```
 
 ---
+# Print formatting with string
+
+```python
+name="Rohit"
+print(name) # Output: Rohit
+```
+In the above example just name being displayed; what if you wanna add `Hello Rohit` instead of `Rohit`? This done by `formating`. See the below example:
+```python
+name="Rohit"
+print("Hello",name) # Output: Hello Rohit
+```
+Another way to do this (**recommended**):
+```python
+name="Rohit"
+print(f"Hello {name}") # Output: Hello Rohit
+```
+
+>The `f` stands for **f-string**, which is short for **formatted string literal** — a powerful way to embed variables or expressions directly inside strings.
+
+---
+# Float formatting with f-string
+
+You can control the **number of decimal places**, **alignment**, and more using **format specifiers** inside `{}`.
+
+What's the answer of `12/7`? Answer is `1.714286`. This number is too long to print onto console, however you can crop it by following method and result would be `1.7142` or how much decimal point you want, it arbitrary choice.
