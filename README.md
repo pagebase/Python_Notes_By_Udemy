@@ -2,7 +2,7 @@
 1. [Syllabus overview](#syllabus-overview)
 2. [Installation process](#installation-process)
 3. [Why Python language?](#why-python-language)
-4. [Command line basics](#Windows-command-(CMD)-line-basics)
+4. [Command line basics](#Windows-command-line-basics)
 5. [Data types](#data-types)
 6. [Operators](#operators)
 7. [Variable assignments](#variable-assignments)
@@ -254,7 +254,7 @@ In real-life applications, Python can help you:
 For example, if your friend asks for a list of the best laptops under $5000, you can write a Python script to scrape laptop listings from Amazon or Flipkart, extract details like price, brand, and features, and save the results in an Excel file using the `openpyxl` or `pandas` library to share easily.
 
 ---
-# Windows command (CMD) line basics
+# Windows command line basics
 
 ## 🖥️ **1. Opening Command Prompt**
 
