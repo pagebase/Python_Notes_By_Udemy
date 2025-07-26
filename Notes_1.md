@@ -523,7 +523,7 @@ my_dict = {key1: value1, key2: value2, ...}
 my_dict = dict(key1=value1, key2=value2, ...)
 ```
 
-## Example:  
+## Example 1:  
 ```python
 student = {
     "name": "Alice",
@@ -533,6 +533,22 @@ student = {
 
 print(student["name"])  # Output: Alice
 print(student["courses"][0]) # Output: Math
+```
+
+## Output:
+```python
+Alice
+Math
+```
+
+## Example 2:
+```python
+ITCompanies=dict(Intel=1000,Google=2000)
+print(ITCompanies["Intel"])
+```
+## Output:
+```python
+1000
 ```
 
 ## Common Dictionary Methods:  
