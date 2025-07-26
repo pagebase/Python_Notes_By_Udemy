@@ -6,15 +6,15 @@
 5. [Data types](#data-types)
 6. [Operators](#operators)
 7. [Variable assignments](#Variable-assignments)
-	1. [Rules for variable assignment](#valid-rules-for-naming-variables-in-python)
+	- [Rules for variable assignment](#valid-rules-for-naming-variables-in-python)
 8. [Strings](#strings)
-	1. [Top 10 string methods](#top-10-string-methods)
-	2. [Print formatting with string](#print-formatting-with-string)
-	3. [Float formatting with f-string](#float-formatting-with-f-string)
+	- [Top 10 string methods](#top-10-string-methods)
+	- [Print formatting with string](#print-formatting-with-string)
+	- [Float formatting with f-string](#float-formatting-with-f-string)
 9. [List](#list)
-	1. [Top 10 list methods](#top-10-list-methods)
+	- [Top 10 list methods](#top-10-list-methods)
 10. [Dictionary](#dictionary)
-	1. [Top 6 dictionary methods](#top-10-dictionary-methods)
+	- [Top 6 dictionary methods](#top-10-dictionary-methods)
 
 ---
 # Syllabus overview
@@ -351,7 +351,7 @@ Age: 21
 Weight: 65.8
 ```
 
-![[Pasted image 20250726144748.png]]
+![Diagram_1](./Resources/Diagram_1.png)
 
 > When you assign particular value to 2 or more variable on that time single data reference is shared to that 2 variable instead of creating individual object. See above diagram. To check reference number, you can use `id()` method.
 
