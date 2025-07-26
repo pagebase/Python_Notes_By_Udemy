@@ -5,7 +5,7 @@
 4. [Command line basics](#Windows-command-line-basics)
 5. [Data types](#data-types)
 6. [Operators](#operators)
-7. [Variable assignments](#variable-assignments)
+7. [Variable assignments](#Variable-assignments)
 	1. [Rules for variable assignment](#valid-rules-for-naming-variables-in-python)
 8. [Strings](#strings)
 	1. [Top 10 string methods](#top-10-string-methods)
@@ -298,7 +298,7 @@ For example, if your friend asks for a list of the best laptops under $5000, you
 - Use `help` to get a list of available commands.
 
 ---
-# Data types in `python`
+# Data types
 
 | Name       | Type  | Description                                                            | Example                                                                                                                                                                                                   |
 | ---------- | ----- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
