@@ -14,7 +14,7 @@
 9. [List](#list)
 	- [Top 10 list methods](#top-10-list-methods)
 10. [Dictionary](#dictionary)
-	- [Top 6 dictionary methods](#top-6-dictionary-methods)
+	- [Top 6 dictionary methods](#top-10-dictionary-methods)
 
 ---
 # Syllabus overview
@@ -806,7 +806,7 @@ print(ITCompanies["Intel"])
 ```python
 1000
 ```
-> `keys` must be in double quote `""`
+
 # Top 6 `dictionary` methods
 
 1. `dict.keys()` Returns all keys
@@ -824,4 +824,195 @@ print(type(keys))
 ```python
 dict_keys(['Pune', 'Mumbai'])
 <class 'dict_keys'>
+```
+
+2. `dict.values()` Return list of values.
+#### Syntax:
+```python
+dict.values()
+```
+#### Example:
+```python
+cities={"Pune":1000, "Delhi":2000}
+
+  
+
+values=cities.values()
+
+  
+
+print(values)
+
+print(type(values))
+
+sum=0
+
+  
+
+for i in values:
+
+    sum+=i
+
+  
+
+print(sum)
+```
+#### Output:
+```python
+dict_values([1000, 2000])
+<class 'dict_values'>
+3000
+```
+
+3. `dict.items()` Return `tuple` of *key-value* pair.
+#### Syntax:
+```python
+dict.items()
+```
+#### Example:
+```python
+cities={"Pune":1000, "Delhi":2000}
+
+values=cities.items()
+
+for i in values:
+
+    print(i)
+
+    print(type(i))
+```
+#### Output:
+```python
+('Pune', 1000)
+<class 'tuple'>
+('Delhi', 2000)
+<class 'tuple'>
+```
+
+4. `dict.get()` Retrieve value safely.
+#### Syntax:
+```python
+dict.get(key)
+```
+#### Example:
+```python
+cities={"Pune":1000, "Delhi":2000}
+
+print(cities.get("Pune"))
+```
+#### Output:
+```python
+1000
+```
+
+5. `update()` Add new *key-value* pair.
+#### Syntax:
+```python
+dict.update({"key":value})
+```
+#### Example:
+```python
+cities={"Pune":1000, "Delhi":2000}
+cities.update({"Kochi":10000})
+print(cities)
+```
+#### Output:
+```python
+{'Pune': 1000, 'Delhi': 2000, 'Kochi': 10000}
+```
+
+6. `pop(key)` Remove and return value.
+#### Syntax:
+```python
+removed_value=dict.pop(key)
+```
+#### Example:
+```python
+cities={"Pune":1000, "Delhi":2000}
+
+removed_value=cities.pop("Delhi")
+
+print(cities)
+```
+#### Output:
+```python
+{'Pune': 1000}
+```
+
+---
+# Tuples
+
+A **tuple** in Python is an ordered collection of elements that is immutable (cannot be changed after creation). Tuples are similar to lists, but unlike lists, their contents cannot be modified (you can't add, remove, or change elements once they are created).
+
+### Key Characteristics of Tuples:
+
+1. **Ordered**: Tuples maintain the order of the elements.
+    
+2. **Immutable**: Once created, the elements of a tuple cannot be modified.
+    
+3. **Heterogeneous**: Tuples can contain elements of different data types (integers, strings, lists, other tuples, etc.).
+    
+4. **Indexing and Slicing**: You can access elements using indexing or slicing, just like lists.
+    
+5. **Iterable**: Tuples can be iterated over in loops.
+    
+6. **Hashable**: Because they are immutable, tuples can be used as keys in dictionaries, unlike lists.
+
+#### Syntax:
+```python
+tuple_name = (element1, element2, element3, ...)
+```
+#### Example 1:
+```python
+# Tuple with multiple elements
+my_tuple = (1, 2, 3, 4)
+
+# Tuple with a single element (note the trailing comma)
+single_element_tuple = (5,)
+
+# Empty tuple
+empty_tuple = ()
+
+# Tuple with mixed data types
+mixed_tuple = (1, "hello", 3.14, True)
+```
+
+> If you don't include the comma, Python will just consider the value inside the parentheses as a single element (Assume `int` ), not a tuple.
+
+#### Example 2:
+```python
+# Tuple as a key in a dictionary
+my_dict = {
+    ('apple', 1): "Fruit",
+    ('banana', 2): "Fruit",
+    ('carrot', 3): "Vegetable"
+}
+
+# Accessing the value using the tuple as the key
+print(my_dict[('apple', 1)])  # Output: Fruit
+print(my_dict[('banana', 2)])  # Output: Fruit
+```
+
+---
+# Set
+
+A **set** in Python is an **unordered** collection of **unique** elements. It is a built-in data type that is similar to a list or tuple, but with some key differences. The most important distinction is that sets do **not** allow duplicate values and do not maintain any order of elements.
+
+### Key Characteristics of Sets:
+
+1. **Unordered**: The elements of a set are not stored in any particular order, and their order may change each time you interact with the set.
+    
+2. **Unique Elements**: Sets do not allow duplicates. If you try to add the same element multiple times, it will only appear once in the set.
+    
+3. **Mutable**: Sets are mutable, meaning you can add and remove elements from a set.
+    
+4. **No Indexing**: You cannot access elements in a set by index like you can with lists or tuples. You can only iterate over the set.
+    
+5. **Hashable Elements**: Elements inside a set must be hashable, meaning they must be immutable (like numbers, strings, or tuples). Mutable types like lists cannot be added to a set.
+
+#### Synatx:
+```python
+# Creating a set
+my_set = {1, 2, 3, 4}
+empty_set = set()  # An empty set (note: {} creates an empty dictionary, not a set)
 ```
