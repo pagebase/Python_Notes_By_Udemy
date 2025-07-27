@@ -15,6 +15,9 @@
 	- [Top 10 list methods](#top-10-list-methods)
 10. [Dictionary](#dictionary)
 	- [Top 6 dictionary methods](#top-10-dictionary-methods)
+11. [List](#list)
+12. [Tuples](#tuples)
+13. [Set](#set)
 
 ---
 # Syllabus overview
