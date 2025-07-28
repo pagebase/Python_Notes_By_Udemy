@@ -18,6 +18,8 @@
 11. [List](#list)
 12. [Tuples](#tuples)
 13. [Set](#set)
+14. [Files](#files)
+15. [Guess the number game](#guess-the-number-game)
 
 ---
 # Syllabus overview
@@ -763,6 +765,15 @@ lst.clear()  # []
 lst = [1, 2, 3]
 lst_copy = lst.copy()  # New list [1, 2, 3]
 ```
+## 12. Add list value through loop
+#### Example:
+```python
+my_list=[i for i in range(1,10) if i % 2==0] # my_list=[x for x in range(1,100)]
+
+for i in my_list:
+
+    print(i) # 2 4 6 8
+```
 
 ---
 # Dictionary
@@ -1018,6 +1029,260 @@ A **set** in Python is an **unordered** collection of **unique** elements. It is
 # Creating a set
 my_set = {1, 2, 3, 4}
 empty_set = set()  # An empty set (note: {} creates an empty dictionary, not a set)
+```
+
+---
+# Files
+
+When you want to work with files like `Excel`, `CSV`, `text`, by editing and changing in it. There are tons of methods used to do so. `open()` method in used to open file for operation.
+#### Syntax:
+```python
+file_pointer=open("file_name.extension","mode")
+```
+
+#### Example:
+```python
+fp=open("Sample.txt") # text file contains "Hello, dude"
+
+print(fp.read())
+```
+#### File directory:
+```python
+Python-src-code/
+    |---Playground.py
+    |---Sample.txt
+```
+> `python` file and `text` file must be in same directory to perform operations.
+
+How to move `cursor` up and down? You can do it by `seek()` method, which let you put your `cursor` where you want. When you read file by `read()` method, after reading it move `cursor` to next line, so if you want to move `cursor` back to top, you can do it by `seek()` method. After doing your file operation, please `close` file by `file_pointer.close()` method
+
+> `read()` method read entire file content with escape characters.
+
+#### Example:
+```python
+fp=open("Sample.txt")
+
+print(fp.read())
+
+fp.seek(0)  # Reset file pointer to the beginning
+
+print(fp.readline())
+fp.close()
+```
+#### Output:
+```python
+Hello, dude.
+Hello, dude.
+```
+
+# Writing to file
+
+By default, the `open()` function will only allow us to read the file. We need to pass the argument `'w'` to write over the file. Before writing data into file, we must know `mode` to work with files in better manner, check out following table.
+
+| Mode | Description                                                                                                 |
+| ---- | ----------------------------------------------------------------------------------------------------------- |
+| `r`  | **Read** (default mode). Opens the file for reading. Error if the file doesn't exist.                       |
+| `w`  | **Write**. Creates a new file or truncates the file if it exists.                                           |
+| `a`  | **Append**. Creates a new file if it doesn’t exist, otherwise appends to the end.                           |
+| `x`  | **Exclusive creation**. Creates a file, but fails if it already exists.                                     |
+| `b`  | **Binary** mode. Used to handle binary files (e.g., images, audio). Add to other modes like `'rb'`, `'wb'`. |
+| `t`  | **Text** mode (default). Used for text files. Combine with other modes like `'rt'`, `'wt'`.                 |
+| `+`  | **Update**. Opens the file for reading and writing (e.g., `'r+'`, `'w+'`).                                  |
+# File methods
+
+|Method|Description|
+|---|---|
+|`read(size=-1)`|Reads entire file or up to `size` bytes.|
+|`readline(size=-1)`|Reads one line from the file.|
+|`readlines()`|Reads all lines and returns them as a list.|
+|`write(string)`|Writes a string to the file.|
+|`writelines(lines)`|Writes a list of strings to the file (no newline added automatically).|
+|`seek(offset, whence=0)`|Moves the file pointer to a specific position.|
+|`tell()`|Returns the current position of the file pointer.|
+|`close()`|Closes the file. Always do this unless using `with`.|
+|`flush()`|Forces the write buffer to be written to disk.|
+|`truncate(size=None)`|Truncates the file to `size` bytes (or current position if not specified).|
+1. `write()` Write data into file.
+#### Example:
+```python
+fp=open("Sample.txt","w")
+
+  
+
+for i in range(65,91):
+
+     fp.write(chr(i)+"\n") # fp.write(f"{chr(i)}\n") <-- Alternative way
+```
+#### Output:
+```python
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+
+```
+
+> 1. Write program which print table from 1 to 100 into file.
+
+#### Solution:
+```python
+with open('tables_1_to_100.txt', 'w') as f:
+
+    for i in range(1, 101):  # Tables from 1 to 100
+
+        f.write(f"Multiplication Table of {i}\n")
+
+        f.write("-" * 30 + "\n")
+
+        for j in range(1, 11):  # Each table up to 10
+
+            f.write(f"{i} x {j} = {i * j}\n")
+
+        f.write("\n")  # Blank line between tables
+```
+
+---
+# Comparison operator
+
+When you compare values by `==` operator on that time it compares value, if you wanna check object ID is same or not on that time you can use `is`.
+
+#### Example:
+```python
+num_1=1
+
+num_2=1
+
+  
+
+if(num_1==num_2):
+
+    print("The numbers are equal.")
+
+else:
+
+    print("The numbers are not equal.")
+
+if num_1 is num_2:
+
+    print("The numbers are identical.")
+
+else:
+
+    print("The numbers are not identical.")
+```
+#### Output:
+```python
+The numbers are equal.
+The numbers are identical.
+```
+
+---
+# `enumerate` function
+
+In Python, the `enumerate()` function is used to **loop over an iterable (like a list, tuple, or string) and keep track of the index** of the current item.
+
+#### Syntax:
+```python
+enumerate(iterable, start=0)
+```
+#### Example:
+```python
+fruits = ['apple', 'banana', 'cherry']
+
+  
+
+for index, fruit in enumerate(fruits):
+
+    print(index, fruit)
+```
+#### Output:
+```python
+0 apple
+1 banana
+2 cherry
+```
+
+> It eliminates the need to manually track indexes with a counter variable.
+---
+# Random module
+
+Visit [here](https://docs.python.org/3/library/random.html#functions-for-integers) to see `random` package document.
+
+# Top 10 `random` methods.
+
+| Method                                   | Description                                                  |
+| ---------------------------------------- | ------------------------------------------------------------ |
+| `random()`                               | Returns a float between **0.0** and **1.0**                  |
+| `randint(a, b)`                          | Returns a random **integer** between `a` and `b` (inclusive) |
+| `randrange(start, stop[, step])`         | Returns a random **integer from a range**, like `range()`    |
+| `uniform(a, b)`                          | Returns a **random float** between `a` and `b`               |
+| `choice(seq)`                            | Returns a **random element** from a non-empty sequence       |
+| `choices(population, k=1, weights=None)` | Returns a list of `k` random elements (with **replacement**) |
+| `sample(population, k)`                  | Returns `k` unique random elements (**no replacement**)      |
+| `shuffle(seq)`                           | **Shuffles** a list (in-place)                               |
+| `seed(a=None)`                           | Sets the seed for reproducibility of random results          |
+| `betavariate(alpha, beta)`               | Returns a random float from a **beta distribution**          |
+#### Example:
+```python
+import random
+
+print(random.random())          # 0.345... (float between 0 and 1)
+print(random.randint(1, 10))    # e.g., 7
+print(random.randrange(0, 100, 5))  # e.g., 25
+print(random.uniform(1.5, 5.5)) # e.g., 3.87
+
+colors = ['red', 'green', 'blue']
+print(random.choice(colors))   # e.g., 'green'
+print(random.choices(colors, k=2))  # e.g., ['red', 'red']
+print(random.sample(colors, 2))     # e.g., ['blue', 'green']
+
+nums = [1, 2, 3, 4, 5]
+random.shuffle(nums)
+print(nums)  # e.g., [3, 1, 4, 5, 2]
+
+random.seed(42)  # Sets seed for reproducible results
+```
+
+---
+# Guess the number game
+```python
+import random
+
+  
+
+while True:
+
+    user_input=int(input("Enter a number between 1 and 10 (or 0 to exit): "))
+
+    if user_input == random.randint(1,10):
+
+        print("Congratulations! You guessed the number correctly.")
+
+    else:
+
+        print("Sorry, that's not correct. Try again.")
 ```
 
 ---
