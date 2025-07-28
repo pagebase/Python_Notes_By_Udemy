@@ -1013,9 +1013,11 @@ A **set** in Python is an **unordered** collection of **unique** elements. It is
     
 5. **Hashable Elements**: Elements inside a set must be hashable, meaning they must be immutable (like numbers, strings, or tuples). Mutable types like lists cannot be added to a set.
 
-#### Synatx:
+#### Syntax:
 ```python
 # Creating a set
 my_set = {1, 2, 3, 4}
 empty_set = set()  # An empty set (note: {} creates an empty dictionary, not a set)
 ```
+
+---
