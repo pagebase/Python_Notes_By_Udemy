@@ -24,6 +24,7 @@
 17. [Lambda function](#lambda-function)
 18. [Global keyword](#global-keyword)
 19. [args](#args)
+20. [kwargs](#kwargs)
 
 ---
 # Syllabus overview
