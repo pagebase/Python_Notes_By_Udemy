@@ -224,6 +224,16 @@ pip install flask
 ```
 > Packages will install only inside the virtual environment.
 
+### File structure
+
+your-project/
+├── venv/                  # Virtual environment (usually ignored in version control)
+├── main.py                # Your main Python script
+├── .env                   # For environment variables like API keys
+├── requirements.txt       # Dependency list
+└── .gitignore             # Ignore files/folders in Git
+
+
 ---
 # Why `python` language
 
