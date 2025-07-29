@@ -20,6 +20,11 @@
 13. [Set](#set)
 14. [Files](#files)
 15. [Guess the number game](#guess-the-number-game)
+16. [Map function](#map-function)
+17. [Lambda function](#lambda-function)
+18. [Global keyword](#global-keyword)
+19. [args](#args)
+20. [kwargs](#kwargs)
 
 ---
 # Syllabus overview
@@ -1283,6 +1288,127 @@ while True:
     else:
 
         print("Sorry, that's not correct. Try again.")
+```
+
+---
+# `map()` function
+
+The `map()` function in Python is used to apply a **function** to **each item** in an **iterable** (like a list, tuple, etc.) and return a new iterable (a map object) with the results.
+
+#### Syntax:
+```python
+map(function, iterable)
+```
+- `function`: A function that will be applied to every item in the iterable.
+    
+- `iterable`: A sequence (like a list, tuple, etc.) whose elements you want to process.
+#### Example:
+```python
+def square(num):
+
+    return num*num
+    
+my_list=[1,2,3,4,5,6,7]
+
+final_value=map(square,my_list)
+
+print(list(final_value))
+```
+#### Output:
+```python
+[1, 4, 9, 16, 25, 36, 49]
+```
+
+# `lambda` function
+
+#### Syntax:
+```python
+lambda arguments: expression
+```
+#### Example 1:
+```python
+add = lambda x, y: x + y
+
+print(add(5, 3))  # Output: 8
+```
+#### Example 2:
+```python
+add=lambda x,y,z:x+y+z
+print(add(10,20,30))
+```
+
+---
+# `global` keyword
+
+The `global` keyword in Python is used to **modify a global variable inside a function**.
+
+By default, when you assign a value to a variable inside a function, Python treats it as **local to that function**. If you want to modify a variable that exists outside the function (in the global scope), you need to declare it as `global`.
+
+#### Example:
+```python
+x = 10
+
+def change():
+    global x
+    x = x + 5  # Now Python knows you're referring to the global x
+    print(x)
+
+change()       # Output: 15
+print(x)       # Output: 15
+```
+
+---
+# `args`
+
+`*args` allows a function to accept **any number of positional arguments** (i.e., values passed without keywords).
+
+#### Syntax:
+```python
+def function_name(*args):
+    for arg in args:
+        print(arg)
+```
+
+- The `*` before `args` **collects all extra positional arguments** into a **tuple** named `args`.
+    
+- You can name it anything (`*data`, `*values`, etc.) — `args` is just a convention.
+#### Example:
+```python
+def greet(*args):
+    for name in args:
+        print(f"Hello, {name}!")
+
+greet("Alice", "Bob", "Charlie")
+```
+
+---
+# `kwargs`
+
+`**kwargs` allows a function to accept **any number of keyword arguments** (i.e., arguments passed as `key=value` pairs).
+
+#### Syntax:
+```python
+def function_name(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key} = {value}")
+```
+
+- The `**` collects extra keyword arguments into a **dictionary** named `kwargs`.
+    
+- You can name it anything (`**options`, `**params`, etc.) — `kwargs` is just a convention.
+#### Example:
+```python
+def print_profile(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+print_profile(name="Alice", age=30, city="New York")
+```
+#### Output:
+```python
+name: Alice
+age: 30
+city: New York
 ```
 
 ---
