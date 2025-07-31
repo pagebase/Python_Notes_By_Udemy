@@ -1423,3 +1423,48 @@ city: New York
 ```
 
 ---
+# OOP
+
+```python
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print("Some sound")
+
+class Dog(Animal):  # Dog inherits from Animal
+    def speak(self):
+        print(f"{self.name} says Woof!")
+
+d = Dog("Buddy")
+d.speak()
+```
+
+Object is entity which store `attribute, methods`. If inherited class doesn't contain any `constructor` then it try to find in `base` class. You can also call `method` without `instance` by `@staticmethod` or `@classmethod` decorator.
+
+- `@classmethod` Use when the method needs access to the class itself (not a specific instance).
+- `@staticmethod` Use when the method doesn’t need access to `self` (the instance) or `cls` (the class).
+
+```python
+class Parent:
+
+    def __init__(self,firstName):
+
+        self.firstName=firstName
+
+    def heydude(self,lastName):
+
+        self.lastName=lastName
+
+obj=Parent("John")
+
+obj.heydude("Wick")
+
+print(obj.firstName)
+
+print(obj.lastName)
+```
+
+---
+
