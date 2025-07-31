@@ -24,6 +24,7 @@
 17. [Global keyword](#global-keyword)
 18. [args](#args)
 19. [kwargs](#kwargs)
+20. [OOP](#oop)
 
 ---
 # Syllabus overview
