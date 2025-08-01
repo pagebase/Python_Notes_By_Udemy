@@ -25,6 +25,9 @@
 18. [args](#args)
 19. [kwargs](#kwargs)
 20. [OOP](#oop)
+21. [Modify Object properties](#modify-object-properties)
+22. [Delete object properties](#delete-object-properties)
+23. [Delete objects](#delete-objects)
 
 ---
 # Syllabus overview
@@ -1468,4 +1471,16 @@ print(obj.lastName)
 ```
 
 ---
+# Modify object properties
 
+#### Syntax:
+`obj.age=30 # Changed 21 to 30`
+
+# Delete object properties
+#### Syntax:
+`del obj.age`
+
+# Delete objects
+
+#### Syntax:
+`del obj`
